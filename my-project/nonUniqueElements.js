@@ -25,6 +25,14 @@ nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
 export default function nonUniqueElements(data) {
-  // your solution goes here
-  return data
+  let values = [];
+
+  for (let value of data) {
+      let count = data.filter(num => num == value).length;
+      if (count >= 2) {
+          values.push(value);
+      }
+  }
+
+  return values;
 }

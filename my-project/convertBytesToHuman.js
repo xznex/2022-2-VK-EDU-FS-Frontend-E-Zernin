@@ -13,5 +13,21 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  // your solution goes here
+    if (typeof bytes !== 'number' || bytes < 0) {
+        return false;
+    }
+
+    let kbytes = bytes / 1024;
+    let mbytes = kbytes / 1024;
+    let gbytes = mbytes / 1024;
+
+    if (bytes < 1024) {
+        return bytes + " B";
+    } else if (kbytes >= 1 && kbytes < 1024) {
+        return Number(kbytes.toFixed(2)) + ' KB';
+    } else if (mbytes >= 1 && mbytes < 1024) {
+        return Number(mbytes.toFixed(2)) + ' MB';
+    } else {
+        return Number(gbytes.toFixed(2)) + ' GB';
+    }
 }
