@@ -1,8 +1,9 @@
-# Домашнее задание №
+# Домашнее задание №1
 
 Прошу @martinkomitsky, @haseprogram или @vaganov-spb проверить его.
 
 Что было сделано:
-<br />*
-<br />*
-<br /> *
+* код к convertBytesToHuman.js, correctSentence.js, nonUniquieElements.js
+* тест для convertBytesToHuman.js
+
+С уважением, Dbaldnc (tg) :)
