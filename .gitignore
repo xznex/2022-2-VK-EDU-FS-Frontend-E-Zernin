@@ -157,3 +157,6 @@ dist
 .svelte-kit
 
 # End of httpswww.toptal.comdevelopersgitignoreapinode,git
+
+build/
+build

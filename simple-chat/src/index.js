@@ -1,4 +1,7 @@
+import './header.css';
 import './index.css';
+import './chat_list.css';
+
 
 const form = document.querySelector('form');
 const input = document.querySelector('.form-input');

@@ -1,0 +1,257 @@
+/* HEADER */
+
+
+.header {
+    text-align: center;
+}
+
+
+.burger {
+    color: white;
+    font-size: 28px;
+}
+
+.first-element {
+    margin-left: 36px;
+}
+
+.header_title {
+    margin-left: 50px;
+}
+
+.header_title > h2{
+    margin-bottom: 25px;
+    color: white;
+}
+
+.other {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+/* SCREEN */
+
+
+.button {
+    border: none;
+    text-decoration: none;
+    background: rgba(0,0,0,0);
+}
+
+.chat_list {
+    padding-left: 30px;
+    padding-right: 15px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 50%);
+}
+
+.chat_message {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    text-decoration: none;
+}
+
+.message__avatar {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.message__avatar_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.message__content {
+    padding-left: 35px;
+}
+
+.message__content_name {
+    color: #232323;
+    margin-bottom: 0px;
+}
+
+.message__content_last_message {
+    display: flex;
+    color: #6f6f6f;
+    margin-top: 8px;
+}
+
+.message__content_last_message > p{
+    margin: 0;
+    padding-left: 7px;
+    padding-top: 2px;
+}
+
+.photo_camera {
+    color: #12b701;
+}
+
+.message__info {
+    margin-left: auto;
+}
+
+.message__info_time {
+    font-size: 14px;
+    color: #6d6d6d;
+}
+
+.message__info_done_all {
+    text-align: right;
+}
+
+.message__info_done_all_icon {
+    color: #8C20A8;
+    font-size: 22px;
+}
+
+.unread {
+    background-color: #9224a9;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.button_cirle_create {
+    background: rgba(0,0,0,0);
+    position: fixed;
+    display: flex;
+    top: 89%;
+    left: 91%;
+}
+
+.circle_create {
+    background-color: #ffd54f;
+    box-shadow: 1px 1px 5px darkgrey;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+
+#create {
+    color: #756228;
+    padding-top: 12px;
+}
+
+.message_notification {
+    background-color: #ffd54f;
+    color: black;
+    padding: 2px;
+    display: flex;
+}
+
+.alternate_email {
+    color: black;
+    font-size: 16px;
+    padding-top: 0px;
+    display: inline-block;
+    margin-top: 1px;
+}
+
+.alternate_email_number {
+    margin: 0;
+    padding-left: 3px;
+}
+
+
+/* Adaptive */
+
+
+@media screen and (max-width: 1024px) {
+    .burger {
+        font-size: 70px;
+    }
+
+    .header_title {
+        padding-bottom: 16px;
+    }
+
+    .header_title > h2 {
+        font-size: 52px;
+    }
+
+    .chat_message {
+        padding-top: 25px;
+    }
+
+    .message__avatar_img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .message__content_name {
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .message__content_last_message {
+        font-size: 38px;
+        padding-top: 35px;
+    }
+
+    .message__content_last_message_photo_camera > p {
+        margin-top: 10px;
+    }
+
+    .message__content_last_message_photo_camera {
+        padding-top: 25px;
+    }
+
+    .photo_camera {
+        font-size: 52px;
+        margin-bottom: 0;
+
+    }
+
+    .message__info_time {
+        font-size: 38px;
+    }
+
+    .message__info_done_all_icon {
+        font-size: 52px;
+    }
+
+    .unread {
+        font-size: 38px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 16px;
+    }
+
+    .message_notification {
+        padding: 5px;
+        border-radius: 16px;
+    }
+
+    .alternate_email {
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    .alternate_email_number {
+        padding-top: 8px;
+    }
+
+    .button_cirle_create {
+        top: 89%;
+        left: 81%;
+    }
+
+    .circle_create {
+        box-shadow: 5px 5px 12px darkgrey;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #create {
+        padding-top: 38px;
+        font-size: 68px;
+    }
+}
