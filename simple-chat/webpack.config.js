@@ -79,12 +79,18 @@ module.exports = {
                 ],
             },
             {
-                test: /images\/\.(.png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'images'
-                }
-            },
+                test: /\.(jpeg|png|jpg)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images',
+                        publicPath: 'images',
+                        emitFile: true,
+                        esModule: false
+                    }
+                },]
+            }
         ],
     },
     plugins: [
