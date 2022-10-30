@@ -21,6 +21,7 @@ body {
 }
 
 .container {
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     height: 100vh;  /* может помешать скроллу */
@@ -75,9 +76,12 @@ body {
 
 .profile {
     display: flex;
+    padding-left: 80px;
 }
 
 .intro-profile {
+    padding-top: 2px;
+    padding-left: 2px;
     margin-left: 12px;
     margin-bottom: 5px;
 }
@@ -103,16 +107,17 @@ body {
     scrollbar-width: thin;
     scrollbar-color: hsl(0 0% 50%);
     margin-top: auto;
-    padding: 6px 5px 2px 5px;
+    padding: 6px 10px 2px 10px;
 }
 
 .message {
     display: flex;
     background-color: #f3e5f6;
     word-break: break-all;
-    border: 1px solid;
-    border-radius: 4px;
-    margin: 4px 8px 10px auto;
+    border: 1px solid #e5dee6;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    margin: 4px 8px 5px auto;
     padding: 6px 14px;
     max-width: calc(100% - 67px);
     flex-direction: column;
@@ -124,6 +129,8 @@ body {
     margin-left: 8px;
     margin-right: auto;
     max-width: 60%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
     background-color: white;
 }
 
@@ -140,7 +147,7 @@ body {
 #done_all {
     color: #8C20A8;
     font-size: 18px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 
@@ -159,8 +166,9 @@ body {
 }
 
 .message_with_clip {
+    background-color: white;
     display: flex;
-    border: 1px solid rgba(25, 25, 25, 0.32);
+    border: 1px solid #dadada;
 }
 
 input[type=submit] {
@@ -173,7 +181,8 @@ input {
     width: calc(100% - 2px - 52px);
     height: 7vh;
     padding-left: 1vh;
-    padding-bottom: 1vh ;
+    padding-bottom: 1vh;
+    padding-top: 10px;
     font-size: medium;
 }
 
@@ -181,6 +190,7 @@ input {
     color: #757575;
     font-size: 36px;
     transform: rotate(90deg);
+    margin-right: 28px;
 }
 
 
@@ -211,8 +221,8 @@ input {
     }
 
     .intro-profile {
-        padding-top: 12px;
-        padding-left: 12px;
+        padding-top: 18px;
+        padding-left: 18px;
         margin-bottom: 0;
     }
 
@@ -224,8 +234,6 @@ input {
         font-size: 32px;
         padding-top: 26px;
     }
-
-
 
     .message {
         padding: 0;
@@ -245,7 +253,6 @@ input {
     }
 
     .info {
-
         padding-top: 12px;
         padding-bottom: 0px;
         padding-right: 18px;
@@ -256,7 +263,8 @@ input {
     }
 
     .date {
-        font-size: 32px;
+        padding-top: 5px;
+        font-size: 30px;
         padding: auto;
         line-height: normal;
     }
@@ -266,17 +274,18 @@ input {
 
     }
 
-    .screen {
+    /* .screen {
         margin-bottom: 12px;
-    }
+
+    } */
 
     .form-input {
         font-size: 38px;
     }
 
     #link {
-        font-size: 88px;
-        margin-right: 38px;
+        font-size: 78px;
+        margin-right: 58px;
     }
 }
 /* HEADER */
@@ -284,6 +293,7 @@ input {
 
 .header {
     text-align: center;
+    z-index: 100;
 }
 
 
@@ -322,7 +332,7 @@ input {
 
 .chat_list {
     padding-left: 30px;
-    padding-right: 15px;
+    padding-right: 30px;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: hsl(0 0% 50%);
@@ -477,7 +487,8 @@ input {
     }
 
     .message__content_last_message_photo_camera > p {
-        margin-top: 10px;
+        margin-top: 12px;
+        padding-left: 15px;
     }
 
     .message__content_last_message_photo_camera {
@@ -499,7 +510,7 @@ input {
     }
 
     .unread {
-        font-size: 38px;
+        font-size: 32px;
         padding-right: 15px;
         padding-left: 15px;
         border-radius: 16px;
@@ -516,7 +527,7 @@ input {
     }
 
     .alternate_email_number {
-        padding-top: 8px;
+        padding-top: 10px;
     }
 
     .button_cirle_create {
