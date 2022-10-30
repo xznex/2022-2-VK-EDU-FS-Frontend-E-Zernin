@@ -1,10 +1,21 @@
+import './header.css';
 import './index.css';
+import './chat_list.css';
+import image from './images/Anonymous.png';
+import image2 from './images/2.jpg';
+import image3 from './images/3.jpg';
+import image4 from './images/4.png';
+import image5 from './images/5.jpg';
+import image6 from './images/6.jpg';
+import image7 from './images/7.jpg';
+import image8 from './images/8.jpg';
 
 const form = document.querySelector('form');
 const input = document.querySelector('.form-input');
 const screen = document.querySelector('.screen');
 
 getMessages();
+screen.scrollTop = screen.scrollHeight;
 
 form.addEventListener('submit', sendMessage.bind(this));
 

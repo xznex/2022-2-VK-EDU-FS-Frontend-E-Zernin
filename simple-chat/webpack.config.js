@@ -54,15 +54,59 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /chat_list\.css$/,
+                include: SRC_PATH,
+                use: [
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                ],
+            },
+            {
+                test: /header\.css$/,
+                include: SRC_PATH,
+                use: [
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.(jpeg|png|jpg)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images',
+                        publicPath: 'images',
+                        emitFile: true,
+                        esModule: false
+                    }
+                },]
+            }
         ],
     },
     plugins: [
+        // new MiniCSSExtractPlugin({
+        //     filename: 'chat_list.css',
+        // }),
         new MiniCSSExtractPlugin({
             filename: 'style.css',
         }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: './index.html'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'chat_list.html',
+            template: './chat_list.html'
         })
     ]
 };
