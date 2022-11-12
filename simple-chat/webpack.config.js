@@ -43,7 +43,19 @@ module.exports = {
                 ],
             },
             {
-                test: /index\.css$/,
+                test: /common\.css$/,
+                include: SRC_PATH,
+                use: [
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                ],
+            },
+            {
+                test: /dialog\.css$/,
                 include: SRC_PATH,
                 use: [
                     {
@@ -101,8 +113,8 @@ module.exports = {
             filename: 'style.css',
         }),
         new HTMLWebpackPlugin({
-            filename: 'index.html',
-            template: './index.html'
+            filename: 'dialog.html',
+            template: './dialog.html'
         }),
         new HTMLWebpackPlugin({
             filename: 'chat_list.html',
