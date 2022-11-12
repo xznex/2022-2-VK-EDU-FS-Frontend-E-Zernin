@@ -1,51 +1,81 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Send a message</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="style.css" rel="stylesheet"></head>
-<body>
-    <div class="container">
-        <div class="hat">
-            <span class="material-icons" id="triangle">eject</span>
-            <span class="material-icons" id="circle">circle</span>
-            <span class="material-icons" id="stop">stop</span>
-        </div>
-        <div class="header">
-            <a class="first-element" href="chat_list.html">
-                <span class="material-icons header__icons" id="arrow_back">arrow_back</span>
-            </a>
-
-            <div class="profile">
-                <img src="images/Anonymous.png" alt="avatar" id="avatar">
-                <div class="intro-profile">
-                    <h2>Дженнифер</h2>
-                    <p>была 2 часа назад</p>
-                </div>
-            </div>
-
-            <div class="other">
-                <span class="material-icons header__icons" id="search">search</span>
-                <span class="material-icons header__icons" id="more_vert">more_vert</span>
-            </div>
-        </div>
-        <div class="screen">
-            <div class="message left_side">
-                <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <div class="info">
-                    <span class="date left-date">14:59</span>
-                </div>
-            </div>
-        </div>
-        <div class="chat">
-            <form class="form" action="/">
-                <div class="message_with_clip">
-                    <input class="form-input" name="message-text" placeholder="Сообщение" type="text">
-                    <span class="material-icons" id="link">attach_file</span>
-                </div>
-            </form>
-        </div>
-    </div>
-<script type="text/javascript" src="bundle.js"></script></body>
-</html>
+<head><link href="style.css" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Entry module not found: Error: Can't resolve 'C:\Users\zerni\Desktop\2022-2-VK-EDU-FS-Frontend-E-Zernin\simple-chat\sr  c\index.html' in 'C:\Users\zerni\Desktop\2022-2-VK-EDU-FS-Frontend-E-Zernin\simple-chat\src':
+  Error: Can't resolve 'C:\Users\zerni\Desktop\2022-2-VK-EDU-FS-Frontend-E-Zernin\simple-chat\src\index.html' in 'C:\Use  rs\zerni\Desktop\2022-2-VK-EDU-FS-Frontend-E-Zernin\simple-chat\src'
+  
+  - compiler.js:79 
+    [simple-chat]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:343 
+    [simple-chat]/[webpack]/lib/Compiler.js:343:11
+  
+  - Compiler.js:681 
+    [simple-chat]/[webpack]/lib/Compiler.js:681:15
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:678 
+    [simple-chat]/[webpack]/lib/Compiler.js:678:31
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1423 
+    [simple-chat]/[webpack]/lib/Compilation.js:1423:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1414 
+    [simple-chat]/[webpack]/lib/Compilation.js:1414:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1409 
+    [simple-chat]/[webpack]/lib/Compilation.js:1409:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1405 
+    [simple-chat]/[webpack]/lib/Compilation.js:1405:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1342 Compilation.seal
+    [simple-chat]/[webpack]/lib/Compilation.js:1342:27
+  
+  - Compiler.js:675 
+    [simple-chat]/[webpack]/lib/Compiler.js:675:18
+  
+  - Compilation.js:1261 
+    [simple-chat]/[webpack]/lib/Compilation.js:1261:4
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [simple-chat]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1253 Compilation.finish
+    [simple-chat]/[webpack]/lib/Compilation.js:1253:28
+  
+  - Compiler.js:672 
+    [simple-chat]/[webpack]/lib/Compiler.js:672:17
+  
+  
+  - Compilation.js:1185 
+    [simple-chat]/[webpack]/lib/Compilation.js:1185:12
+  
+  - Compilation.js:1044 errorAndCallback
+    [simple-chat]/[webpack]/lib/Compilation.js:1044:6
+  
+</pre><script type="text/javascript" src="bundle.js"></script>
