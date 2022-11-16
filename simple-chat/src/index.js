@@ -1,5 +1,6 @@
 import './header.css';
-import './index.css';
+import './dialog.css';
+import './common.css';
 import './chat_list.css';
 import image from './images/Anonymous.png';
 import image2 from './images/2.jpg';
@@ -37,11 +38,14 @@ function sendMessage(event) {
 
     screen.scrollTop = screen.scrollHeight;
     input.value = "";
+    const send = document.getElementById("send");
+    send.remove();
 }
 
 function renderMessage(message) {
     let div = document.createElement("div");
     div.className = "message";
+    div.style.animation = "appear .4s";
     screen.append(div);
 
     let text_message = document.createElement("span");
@@ -66,7 +70,7 @@ function renderMessage(message) {
     status.id = "done_all";
     status.innerHTML = "done_all";
     info.appendChild(status);
-    
+
 }
 
 function saveMessage(message) {

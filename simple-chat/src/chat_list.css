@@ -2,7 +2,7 @@
 
 
 .header {
-    text-align: center;
+    text-align: justify;
     z-index: 100;
 }
 
@@ -12,8 +12,13 @@
     font-size: 28px;
 }
 
+.burger:hover {
+    cursor: pointer;
+}
+
 .first-element {
-    margin-left: 36px;
+    /* margin-left: 36px; */
+    margin-bottom: 6px;
 }
 
 .header_title {
@@ -41,17 +46,28 @@
 }
 
 .chat_list {
-    padding-left: 30px;
-    padding-right: 30px;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: hsl(0 0% 50%);
 }
 
 .chat_message {
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     border-bottom: 1px solid lightgray;
     text-decoration: none;
+    transition-duration: 0.25s;
+}
+
+.chat_message:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+
+.chat_message:active {
+    background-color: lightgray;
+    transform: scale(0.99);
 }
 
 .message__avatar {
@@ -127,12 +143,28 @@
 
 .circle_create {
     background-color: #ffd54f;
-    box-shadow: 1px 1px 5px darkgrey;
+    box-shadow: 1px 1px 5px #ffd54f;
     border-radius: 25px;
     text-align: center;
     vertical-align: middle;
     width: 50px;
     height: 50px;
+    animation: pulse 2s infinite;
+}
+
+.circle_create:hover {
+    cursor: pointer;
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
 }
 
 #create {
@@ -166,15 +198,15 @@
 
 @media screen and (max-width: 1024px) {
     .burger {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .header_title {
-        padding-bottom: 16px;
+        padding-bottom: 18px;
     }
 
     .header_title > h2 {
-        font-size: 52px;
+        font-size: 42px;
     }
 
     .chat_message {
@@ -182,45 +214,47 @@
     }
 
     .message__avatar_img {
-        width: 170px;
-        height: 170px;
+        width: 120px;
+        height: 120px;
     }
 
     .message__content_name {
-        font-size: 42px;
+        font-size: 32px;
         font-weight: 500;
+        line-height: normal;
+        margin-top: 20px;
     }
 
     .message__content_last_message {
-        font-size: 38px;
-        padding-top: 35px;
+        font-size: 28px;
+        padding-top: 15px;
+        line-height: normal;
     }
 
     .message__content_last_message_photo_camera > p {
-        margin-top: 12px;
         padding-left: 15px;
     }
 
     .message__content_last_message_photo_camera {
-        padding-top: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     .photo_camera {
-        font-size: 52px;
+        font-size: 42px;
         margin-bottom: 0;
-
     }
 
     .message__info_time {
-        font-size: 38px;
+        font-size: 28px;
     }
 
     .message__info_done_all_icon {
-        font-size: 52px;
+        font-size: 42px;
     }
 
     .unread {
-        font-size: 32px;
+        font-size: 22px;
         padding-right: 15px;
         padding-left: 15px;
         border-radius: 16px;
@@ -232,17 +266,17 @@
     }
 
     .alternate_email {
-        font-size: 38px;
+        font-size: 28px;
         font-weight: bold;
     }
 
     .alternate_email_number {
-        padding-top: 10px;
+        padding-top: 5px;
     }
 
     .button_cirle_create {
-        top: 89%;
-        left: 81%;
+        top: 86%;
+        left: 77%;
     }
 
     .circle_create {
@@ -250,10 +284,140 @@
         border-radius: 50%;
         width: 150px;
         height: 150px;
+        animation: pulse 2s infinite;
+    }
+
+    .circle_create:hover, .circle_create::after {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+        }
+    
+        70% {
+            box-shadow: 0 0 0 30px rgba(204,169,44, 0);
+        }
     }
     
     #create {
         padding-top: 38px;
         font-size: 68px;
     }
+}
+
+@media screen and (max-width: 648px) {
+    #triangle {
+        font-size: 20px;
+    }
+
+    #stop {
+        font-size: 20px;
+    }
+
+    .button {
+        margin-left: 20px;
+    }
+
+    .burger {
+        font-size: 25px;
+    }
+
+    .header {
+        padding-top: 10px;
+    }
+
+    .header_title {
+        padding-top: 10px;
+        margin-left: 15px;
+    }
+
+    .header_title > h2{
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .other {
+        padding-bottom: 3px;
+    }
+
+    .chat_message {
+        padding: 5px 20px 0 15px;
+    }
+
+    .message__avatar_img {
+        width: 60px;
+        height: 60px;
+    }
+    .message__content {
+        padding-left: 15px;
+    }
+    
+    .message__content_name {
+        margin-top: 10px;
+        padding-bottom: 7px;
+        font-size: 18px;
+    }
+
+    .message__content_last_message {
+        margin-top: 0px;
+        padding-top: 0px;
+        font-size: 15px;
+    }
+
+    .message__info_time {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 9px;
+    }
+
+    .message__info_done_all_icon {
+        font-size: 22px;
+    }
+
+    .unread {
+        font-size: 12px;
+        padding: 3px 7px;
+    }
+
+    .message_notification {
+        padding: 3px 5px;
+    }
+
+    .alternate_email {
+        font-size: 12px;
+        height: 12px;
+        padding-top: 3px;
+    }
+
+    .alternate_email_number {
+        padding-top: 0px;
+    }
+
+    .button_cirle_create {
+        top: 87%;
+        left: 70%;
+    }
+
+    .circle_create {
+        box-shadow: 5px 5px 12px darkgrey;
+        width: 60px;
+        height: 60px;
+    }
+
+    #create {
+        padding-top: 15px;
+        font-size: 28px;
+    }
+    
+    .photo_camera {
+        font-size: 24px;
+    }
+
+    .message__content_last_message_photo_camera > p {
+        padding-left: 10px;
+    }
+
 }
