@@ -15,6 +15,26 @@ const form = document.querySelector('form');
 const input = document.querySelector('.form-input');
 const screen = document.querySelector('.screen');
 
+
+const link = document.getElementById("link");
+const message_text = document.getElementById("message_text");
+const message_with_clip = document.getElementById("message_with_clip");
+
+// создание send
+let send = document.createElement("span");
+send.classList = "material-icons";
+send.id = "send";
+send.innerHTML = "send";
+
+message_text.oninput = function() {
+    if (message_text.value.length > 0) {
+        message_with_clip.append(send);
+    } else {
+        send.remove();
+    }
+};
+
+
 getMessages();
 screen.scrollTop = screen.scrollHeight;
 
@@ -70,7 +90,6 @@ function renderMessage(message) {
     status.id = "done_all";
     status.innerHTML = "done_all";
     info.appendChild(status);
-
 }
 
 function saveMessage(message) {
