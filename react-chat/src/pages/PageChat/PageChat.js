@@ -4,7 +4,7 @@ import {DialogHeader} from '../../components/Header/DialogHeader';
 import {PageChatContent} from '../../components/Content/PageChatContent';
 import {MessageForm} from "../../components/Button/MessageForm";
 
-export function PageChat() {
+export function PageChat(props) {
 	const localMessages = (localStorage.getItem("messages")) ? JSON.parse(localStorage.getItem("messages")) : [];
 	const [messageValue, setMessageValue] = useState('');
 	const [messages, setMessages] = useState([...localMessages]);
@@ -50,7 +50,7 @@ export function PageChat() {
 
 	return (
 		<div className="container">
-			<DialogHeader/>
+			<DialogHeader changePage={() => props.changePage('chat-list')} />
 			<PageChatContent messages={messages}/>
 			<MessageForm
 				onFormSubmit={onFormSubmit}

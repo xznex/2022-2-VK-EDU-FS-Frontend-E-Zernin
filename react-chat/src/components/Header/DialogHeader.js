@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-export function DialogHeader() {
+export function DialogHeader(props) {
     return (
         <React.Fragment>
             <div className={header.hat}>
@@ -17,9 +17,9 @@ export function DialogHeader() {
                 <StopIcon id={header.stop} />
             </div>
             <div className={header.header}>
-                <a className={header.first_element} href="/">
+                <div className={header.first_element} onClick={props.changePage}>
                     <ArrowBackIcon sx={{ fontSize: 35 }} className={`${header.header__icons}`} id={header.arrow_back} />
-                </a>
+                </div>
 
                 <div className={header.profile}>
                     <img src={avatar} alt="avatar" id={header.avatar} />

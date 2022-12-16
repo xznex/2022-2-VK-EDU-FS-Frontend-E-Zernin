@@ -5,26 +5,26 @@ import {ChatList} from "./pages/PageChatList/ChatList";
 import {PageChat} from "./pages/PageChat/PageChat";
 
 class App extends React.Component {
-    showChatList = () => {
-        if (window.location.pathname === '/2022-2-VK-EDU-FS-Frontend-E-Zernin/') {
-            return <ChatList />
-        }
-    }
-    showPageChat = () => {
-        if (window.location.pathname === '/2022-2-VK-EDU-FS-Frontend-E-Zernin/chat') {
-            return <PageChat />
-        }
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			currentPage: 'chat-list'
+		};
+	}
 
+	render() {
+		return (
+			<div className="App">
+				{this.state.currentPage === 'chat-list' && (
+					<ChatList changePage={_currentPage => this.setState({currentPage: _currentPage})}/>
+				)}
 
-    render() {
-        return (
-            <div className="App">
-                {this.showChatList()}
-                {this.showPageChat()}
-            </div>
-        );
-    }
+				{this.state.currentPage === 'chat' && (
+					<PageChat changePage={_currentPage => this.setState({currentPage: _currentPage})}/>
+				)}
+			</div>
+		);
+	}
 }
 
 export default App;
