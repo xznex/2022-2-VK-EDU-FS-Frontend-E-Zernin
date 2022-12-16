@@ -1,5 +1,4 @@
 import React from "react";
-import styles from './DialogHeader.module.css';
 import header from './CommonHeader.module.css';
 import avatar from './Anonymous.png';
 import EjectIcon from '@mui/icons-material/Eject';
