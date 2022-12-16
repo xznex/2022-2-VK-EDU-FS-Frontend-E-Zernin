@@ -1,0 +1,253 @@
+.screen {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 50%);
+    margin-top: auto;
+    padding: 6px 10px 2px 10px;
+    overflow-x: hidden;
+}
+
+.message {
+    display: flex;
+    background-color: #f3e5f6;
+    word-break: break-all;
+    border: 1px solid #e5dee6;
+    border-radius: 5px 5px 0 5px;
+    margin: 4px 8px 5px auto;
+    padding: 6px 14px;
+    max-width: calc(100% - 67px);
+    flex-direction: column;
+    width: fit-content;
+    text-align: start;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.left_side {
+    margin-left: 8px;
+    margin-right: auto;
+    max-width: 60%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+}
+
+.info {
+    display: flex;
+}
+
+.date {
+    color: #615b62;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.done_all {
+    color: #8C20A8;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.chat {
+    display: flex;
+    padding-top: auto;
+}
+
+.form {
+    width: 100%;
+    display: inline-block;
+
+}
+
+.message_with_clip {
+    background-color: white;
+    display: flex;
+    border: 1px solid #dadada;
+}
+
+input[type=submit] {
+    visibility: collapse;
+}
+
+input {
+    border: 0;
+    outline: none;
+    width: calc(100% - 2px - 52px - 40px);
+    /*width: calc(100%);*/
+    height: 7vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+    padding-top: 10px;
+    font-size: medium;
+}
+
+#button_send {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#link {
+    color: #757575;
+    font-size: 36px;
+    border-radius: 50%;
+    user-select: none;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#link:hover {
+    cursor: pointer;
+}
+
+#link:active {
+    transform: scale(0.95);
+    box-shadow: inset 3px 2px 22px 2px rgba(41, 39, 39, 0.24);
+}
+
+#send {
+    color: #8e24aa;
+    font-size: 32px;
+    margin-left: 13px;
+    height: 32px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+#send:hover {
+    cursor: pointer;
+}
+
+#send:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 1024px) {
+    .message {
+        padding: 36px 0 5px 26px;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+
+    .text {
+        font-size: 38px;
+        padding-right: 28px;
+        padding-bottom: 12px;
+        text-align: left;
+        line-height: 34px;
+    }
+
+    .info {
+        padding-top: 12px;
+        padding-bottom: 0;
+        padding-right: 18px;
+    }
+
+    .left_date {
+        padding-bottom: 12px;
+    }
+
+    .date {
+        font-size: 30px;
+        padding: auto;
+        line-height: normal;
+    }
+
+    .done_all {
+        font-size: 42px;
+
+    }
+
+    .form_input {
+        font-size: 38px;
+    }
+
+    #link {
+        font-size: 78px;
+        height: 78px;
+        margin-right: 30px;
+        margin-top: 25px;
+    }
+
+    #send {
+        font-size: 69px;
+        height: 100%;
+        padding-top: 21px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .message {
+        padding: 10px 15px 5px 10px;
+        margin: 10px 6px 5px auto;
+    }
+
+    .text {
+        font-size: 16px;
+        padding: 0;
+        line-height: normal;
+    }
+
+    .info {
+        padding: 5px 0 0;
+    }
+
+    .date {
+        font-size: 12px;
+        padding-top: 0;
+    }
+
+    .done_all {
+        font-size: 15px;
+    }
+
+    .left_side {
+        margin-left: 0;
+        margin-right: auto;
+        max-width: 60%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 5px;
+        background-color: white;
+    }
+
+    .left_date {
+        padding-bottom: 0;
+    }
+
+    input {
+        border: 0;
+        outline: none;
+        width: calc(100% - 2px - 52px);
+        height: 8vh;
+        padding-left: 1vh;
+        padding-bottom: 1vh;
+        padding-top: 10px;
+    }
+
+    .form_input {
+        font-size: 15px;
+    }
+
+    #link {
+        font-size: 30px;
+        margin-top: 13px;
+        height: 30px;
+        margin-left: 3px;
+        padding: 0;
+    }
+
+    #send {
+        font-size: 26px;
+        height: 46px;
+        margin: 0;
+        padding: 7px 0 0;
+    }
+}

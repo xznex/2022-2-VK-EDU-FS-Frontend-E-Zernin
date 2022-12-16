@@ -1,0 +1,74 @@
+.burger {
+    color: white;
+    font-size: 48px;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.header_title {
+    margin-left: 50px;
+}
+
+.header_title > h2{
+    margin-bottom: 25px;
+    color: white;
+}
+
+.button {
+    border: none;
+    text-decoration: none;
+    background: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 1024px) {
+    .burger {
+        font-size: 60px;
+    }
+
+    .header_title {
+        padding-bottom: 18px;
+    }
+
+    .header_title > h2 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    #triangle {
+        font-size: 20px;
+    }
+
+    #stop {
+        font-size: 20px;
+    }
+
+    .button {
+        margin-left: 20px;
+    }
+
+    .burger {
+        font-size: 25px;
+    }
+
+    .header {
+        padding-top: 10px;
+    }
+
+    .header_title {
+        padding-top: 10px;
+        margin-left: 15px;
+    }
+
+    .header_title > h2{
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .other {
+        padding-bottom: 3px;
+    }
+}
