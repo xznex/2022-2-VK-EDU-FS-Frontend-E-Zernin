@@ -16,7 +16,7 @@ export function ChatList(props) {
 		<div className="container">
 			<ChatListHeader/>
 			<div className={styles.chat_list}>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -31,7 +31,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -46,7 +46,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -61,7 +61,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -76,7 +76,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -94,7 +94,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -113,7 +113,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -128,7 +128,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -143,7 +143,7 @@ export function ChatList(props) {
 						</div>
 					</div>
 				</div>
-				<div className={styles.chat_message} onClick={props.changePage('chat')}>
+				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
