@@ -1,19 +1,27 @@
 import React from 'react';
+
 import './App.css';
-import {
-    ChatList,
-    Dialog,
-} from './pages'
+import {ChatList} from "./pages/PageChatList/ChatList";
+import {PageChat} from "./pages/PageChat/PageChat";
 
 class App extends React.Component {
-    // constructor(props) {
-    //   super(props);
-    // }
+    showChatList = () => {
+        if (window.location.pathname === '/') {
+            return <ChatList />
+        }
+    }
+    showPageChat = () => {
+        if (window.location.pathname === '/chat') {
+            return <PageChat />
+        }
+    }
+
+
     render() {
         return (
             <div className="App">
-                {/* <Dialog /> */}
-                <ChatList />
+                {this.showChatList()}
+                {this.showPageChat()}
             </div>
         );
     }
