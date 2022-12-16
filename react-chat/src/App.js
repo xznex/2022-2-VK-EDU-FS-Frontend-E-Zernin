@@ -6,12 +6,12 @@ import {PageChat} from "./pages/PageChat/PageChat";
 
 class App extends React.Component {
     showChatList = () => {
-        if (window.location.pathname === '/') {
+        if (window.location.pathname === '/2022-2-VK-EDU-FS-Frontend-E-Zernin/') {
             return <ChatList />
         }
     }
     showPageChat = () => {
-        if (window.location.pathname === '/chat') {
+        if (window.location.pathname === '/2022-2-VK-EDU-FS-Frontend-E-Zernin/chat') {
             return <PageChat />
         }
     }
