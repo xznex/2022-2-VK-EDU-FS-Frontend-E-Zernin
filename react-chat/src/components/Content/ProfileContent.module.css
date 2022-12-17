@@ -3,9 +3,6 @@
     margin-right: auto;
 }
 
-.avatar_edited {
-
-}
 
 /* alert: cringe; */
 #avatar {
@@ -16,14 +13,14 @@
     margin-top: 25px;
 }
 
-input[type='text'], textarea {
+.profile_input {
     background-color: #E7E7E7;
     height: 30px;
     padding: 0;
     width: 350px;
 }
 
-textarea, textarea:focus {
+.profile_textarea, textarea:focus {
     height: 80px;
     outline: none;
     border: none;
@@ -47,8 +44,6 @@ label {
     background-color: #E7E7E7;
     border-bottom: 2px solid #9A9A9A;
     padding: 0 20px 0 20px;
-
-    /*box-shadow: inset ;*/
 }
 
 .comment {
