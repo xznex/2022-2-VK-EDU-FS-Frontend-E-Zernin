@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 import header from './CommonHeader.module.css';
 import avatar from './Anonymous.png';
 import EjectIcon from '@mui/icons-material/Eject';
@@ -8,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-export function DialogHeader(props) {
+export function DialogHeader() {
     return (
         <React.Fragment>
             <div className={header.hat}>
@@ -17,9 +19,9 @@ export function DialogHeader(props) {
                 <StopIcon id={header.stop} />
             </div>
             <div className={header.header}>
-                <div className={header.first_element} onClick={props.changePage}>
+                <Link to='/' className={header.first_element}>
                     <ArrowBackIcon sx={{ fontSize: 35 }} className={`${header.header__icons}`} id={header.arrow_back} />
-                </div>
+                </Link>
 
                 <div className={header.profile}>
                     <img src={avatar} alt="avatar" id={header.avatar} />

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
@@ -11,12 +12,12 @@ import avatarProfile from './Anonymous.png'
 
 // по хорошему здесь стоило бы сделать objects map всех чатиков c их компонентами и проверками всяких done_all'ов,
 // avatar'ов, но это только по хорошему
-export function ChatList(props) {
+export default function ChatList() {
 	return (
 		<div className="container">
 			<ChatListHeader/>
 			<div className={styles.chat_list}>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -30,8 +31,8 @@ export function ChatList(props) {
 							<span className={styles.unread}>99</span>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -45,8 +46,8 @@ export function ChatList(props) {
 							<DoneAllIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -60,8 +61,8 @@ export function ChatList(props) {
 							<DoneAllIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -75,8 +76,8 @@ export function ChatList(props) {
 							<DoneAllIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -93,8 +94,8 @@ export function ChatList(props) {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -112,8 +113,8 @@ export function ChatList(props) {
 							<DoneIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -127,8 +128,8 @@ export function ChatList(props) {
 							<DoneAllIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -142,8 +143,8 @@ export function ChatList(props) {
 							<DoneAllIcon className={styles.message__info_done_all_icon}/>
 						</div>
 					</div>
-				</div>
-				<div className={styles.chat_message} onClick={() => props.changePage('chat')}>
+				</Link>
+				<Link className={styles.chat_message} to='/chat/1'>
 					<div className={styles.message__avatar}>
 						<img src={avatarProfile} alt="avatar" className={styles.message__avatar_img}/>
 					</div>
@@ -160,7 +161,7 @@ export function ChatList(props) {
 							</div>
 						</div>
 					</div>
-				</div>
+				</Link>
 			</div>
 		</div>
 	);
