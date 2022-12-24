@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 
 import {DialogHeader} from '../../components/Header/DialogHeader';
 import {PageChatContent} from '../../components/Content/PageChatContent';
@@ -8,6 +8,23 @@ export default function PageChat() {
 	const localMessages = (localStorage.getItem("messages")) ? JSON.parse(localStorage.getItem("messages")) : [];
 	const [messageValue, setMessageValue] = useState('');
 	const [messages, setMessages] = useState([...localMessages]);
+	const API_URL = 'https://tt-front.vercel.app/messages';
+
+	useEffect(() => {
+		const poll_items = () => {
+			fetch(API_URL)
+				.then(resp => resp.json())
+				.then(data => data.forEach((mes) => {
+					mes.chat = 0;
+					mes.sender = mes.author;
+					mes.is_delivered = false;
+					mes.sent_at = new Date(mes.timestamp).toString();
+					setMessages(prevState => [...prevState, mes]);
+					console.log(mes)
+				}));
+		}
+		const t = setInterval(() => poll_items(), 30000);
+	}, []);
 
 	const saveMessage = message => {
 		let localMessages = localStorage.getItem("messages");
@@ -40,6 +57,7 @@ export default function PageChat() {
 
 		saveMessage(message_output);
 		setMessages(prevState => [...prevState, message_output]);
+
 
 		setMessageValue('');
 	}
