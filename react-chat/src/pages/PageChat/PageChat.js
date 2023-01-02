@@ -8,22 +8,40 @@ export default function PageChat() {
 	const localMessages = (localStorage.getItem("messages")) ? JSON.parse(localStorage.getItem("messages")) : [];
 	const [messageValue, setMessageValue] = useState('');
 	const [messages, setMessages] = useState([...localMessages]);
-	const API_URL = 'https://tt-front.vercel.app/messages';
+	const API_URL_GET = 'https://tt-front.vercel.app/messages';
+	const API_URL_POST = 'https://tt-front.vercel.app/message';
+
+	const sendRequest = (method, url, body = null) => {
+		const headers = {
+			'Content-Type': 'application/json',
+		}
+
+		return fetch(url, body ? {
+			method: method,
+			body: JSON.stringify(body),
+			headers: headers,
+		} : {method: method}).then(response => {
+			if (response.status >= 400) {
+				return response.json().then(result => {
+					const error = new Error('Something went wrong!');
+					error.data = result;
+					throw error;
+				})
+			}
+			return response.json();
+		});
+	}
 
 	useEffect(() => {
-		const poll_items = () => {
-			fetch(API_URL)
-				.then(resp => resp.json())
-				.then(data => data.forEach((mes) => {
-					mes.chat = 0;
-					mes.sender = mes.author;
-					mes.is_delivered = false;
-					mes.sent_at = new Date(mes.timestamp).toString();
-					setMessages(prevState => [...prevState, mes]);
-					console.log(mes)
-				}));
-		}
-		const t = setInterval(() => poll_items(), 30000);
+		sendRequest('GET', API_URL_GET)
+			.then(data => data.forEach((mes) => {
+				mes.chat = 0;
+				mes.sender = mes.author;
+				mes.is_delivered = false;
+				mes.sent_at = new Date(mes.timestamp).toString();
+				setMessages(prevState => [...prevState, mes]);
+				console.log(mes)
+			})).then(() => console.log(messageValue));
 	}, []);
 
 	const saveMessage = message => {
@@ -50,14 +68,26 @@ export default function PageChat() {
 		const message_output = {
 			chat: 15,
 			sender: 5,
-			is_delivered: true,
+			is_delivered: false,
 			sent_at: sent_at.toString(),
 			text: messageValue,
 		};
 
+		const message_output_for_tt_front_server = {
+			author: "Testov Testik",
+			text: message_output.text
+		}
+
+		console.log(message_output_for_tt_front_server)
+
 		saveMessage(message_output);
 		setMessages(prevState => [...prevState, message_output]);
 
+		console.log(JSON.stringify(message_output))
+
+		sendRequest('POST', API_URL_POST, message_output_for_tt_front_server)
+			.then(resp => console.log(resp))
+			.catch(err => console.log(err, err.data))
 
 		setMessageValue('');
 	}

@@ -111,7 +111,6 @@ out
 dist
 
 # Gatsby files
-.cache
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # httpsnextjs.orgblognext-9-1#public-directory-support
 # public
@@ -160,3 +159,8 @@ dist
 
 simple-chat/build/
 .idea
+
+.config
+.scripts
+
+.gitignore
