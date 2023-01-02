@@ -41,7 +41,7 @@ export default function PageChat() {
 				mes.sent_at = new Date(mes.timestamp).toString();
 				setMessages(prevState => [...prevState, mes]);
 				console.log(mes)
-			})).then(() => console.log(messageValue));
+			}));
 	}, []);
 
 	const saveMessage = message => {
