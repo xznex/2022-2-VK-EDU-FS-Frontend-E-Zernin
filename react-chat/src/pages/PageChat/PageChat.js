@@ -44,6 +44,21 @@ export default function PageChat() {
 			}));
 	}, []);
 
+	useEffect(() => {
+		const pollItems = () => {
+			sendRequest('GET', API_URL_GET)
+				.then(data => {
+					console.log(data.length);
+					console.log(messages.length);
+					if (data.length > messages.length) {
+						console.log(messages.slice(data.length + 1));
+						setMessages(prevState => [...prevState, (messages.slice(data.length + 1))])
+					}
+				});
+		}
+		setInterval(() => pollItems(), 10000);
+	});
+
 	const saveMessage = message => {
 		let localMessages = localStorage.getItem("messages");
 
