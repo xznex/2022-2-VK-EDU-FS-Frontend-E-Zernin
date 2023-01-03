@@ -3,7 +3,7 @@ import styles from "../../pages/PageChat/Dialog.module.css";
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 
 export function Message({message}) {
-	const date = new Date(message.sent_at);
+	const date = new Date(message.timestamp);
 	const currentHours = ("0" + date.getHours()).slice(-2);
 	const currentMinutes = ("0" + date.getMinutes()).slice(-2);
 	const date_out = `${currentHours}:${currentMinutes}`
